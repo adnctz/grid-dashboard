@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ArticlesPinnedSmallComponent } from './articles-pinned-small/articles-pinned-small.component';
 import { RouterModule } from '@angular/router';
+import { ArticlesAlternativeSmallComponent } from './articles-alternative-small/articles-alternative-small.component';
 
 @NgModule({
   imports: [
@@ -14,20 +15,21 @@ import { RouterModule } from '@angular/router';
       {
         path: '',
         component: ArticlesPinnedSmallComponent,
+      },
+      {
+        path: 'pinned',
+        component: ArticlesPinnedSmallComponent,
+      },
+      {
+        path: 'alt',
+        component: ArticlesAlternativeSmallComponent,
       }
-      // {
-      //   path: '',
-      //   component: () => import('./articles-pinned-small/articles-pinned-small.component').then(m => m.ArticlesPinnedSmallComponent)
-      // },
-      // {
-      //   path: '',
-      //   loadChildren: () => import('./articles-pinned-small/articles-pinned-small.component').then(m => m.ArticlesPinnedSmallComponent)
-      // }
     ]),
   ],
   declarations: [
     AppComponent,
-    ArticlesPinnedSmallComponent
+    ArticlesPinnedSmallComponent,
+    ArticlesAlternativeSmallComponent
   ],
   bootstrap: [AppComponent]
 })
